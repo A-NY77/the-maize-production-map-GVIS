@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cultivation of Maize crops in Africa</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@7.3.0/ol.css" />
+  <script src="https://cdn.jsdelivr.net/npm/ol@7.3.0/dist/ol.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/simple-statistics@7.8.3/dist/simple-statistics.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h2>Cultivation of Maize crops in Africa</h2>
+    <p>Maize production from the year 1961 to 2023</p>
+  </header>
+
+  <div id="controls">
+    
+    <label><strong>Year:</strong></label>
+    <input type="range" id="yearA" min="1961" max="2023" value="1994" />
+    <span id="yearLabelA">1994</span>
+     
+    <label><strong>Mode:</strong></label>
+    <select id="mapMode">
+      <option value="yield">Yield (Choropleth)</option>
+      <option value="bivariate">Bivariate Blend</option>
+      <option value="dotdensity">Dot Density</option>
+    </select>
+
+    <label><strong>Year</strong></label>
+    <input type="range" id="yearB" min="1961" max="2023" value="2023" />
+    <span id="yearLabelB">2023</span>
+  </div>
+
+  <div id="mainPanel">
+    <div id="mapContainer">
+      <div id="mapA" class="map"></div>
+      <div id="mapB" class="map"></div>
+    </div>
+
+    <div id="legendPanel">
+      <strong>Legend Options</strong>
+      <div id="legendControls">
+        <label><input type="checkbox" id="showArea" checked /> Area Harvested</label><br />
+        <label><input type="checkbox" id="showProd" checked /> Production</label>
+      </div>
+
+      <div id="legendBox"></div>
+      <div id="legendA" class="legend-box"></div>
+      <div id="legendB" class="legend-box"></div>
+
+      <div style="margin-top: 20px; font-size: 11px; color: #777;">
+        <p><em>Note:</em> Note:
+Maize production data (1961–2023) were collected from national official sources using questionaires .Missing values 
+and data from countries that had not attained independence yet were generated using FAO’s ensemble imputation
+methodology  to address gaps in national reporting. Minor discrepancies may persist, particularly for earlier years or
+ regions with limited data availability.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="tooltip"></div>
+  <script src="dual.js"></script>
+</body>
+</html>

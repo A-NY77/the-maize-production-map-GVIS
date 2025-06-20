@@ -1,0 +1,82 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+header {
+  background: #f5f5f5;
+  padding: 12px 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+#controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background: #eaeaea;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+}
+
+#mainPanel {
+  display: flex;
+  flex-direction: row;
+  height: calc(100% - 120px);
+  width: 100%;
+}
+
+#mapContainer {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  height: 100%;
+}
+
+.map {
+  flex: 1;
+  height: 100%;
+  border-right: 1px solid #ccc;
+}
+
+#legendPanel {
+  width: 20%;
+  background: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+  border-left: 1px solid #ccc;
+}
+
+#legendControls {
+  margin-bottom: 10px;
+}
+
+#legendBox {
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+#legendBox table {
+  border-collapse: collapse;
+  margin-top: 4px;
+}
+
+#legendBox td {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #aaa;
+}
+
+#tooltip {
+  position: absolute;
+  background: white;
+  border: 1px solid #aaa;
+  padding: 5px;
+  font-size: 12px;
+  pointer-events: none;
+  display: none;
+  z-index: 1000;
+}
